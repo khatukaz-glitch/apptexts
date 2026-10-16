@@ -1,30 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Telegram Mini App — Task Manager</title>
+    <title>Lyrics Box — Тексты песен</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <script>
-      // Apply Telegram theme immediately to avoid flash
       (function() {
         var tg = window.Telegram && window.Telegram.WebApp;
         if (tg) {
           var tp = tg.themeParams || {};
-          var root = document.documentElement;
-          if (tp.bg_color) root.style.setProperty('--tg-theme-bg-color', tp.bg_color);
-          if (tp.text_color) root.style.setProperty('--tg-theme-text-color', tp.text_color);
-          if (tp.hint_color) root.style.setProperty('--tg-theme-hint-color', tp.hint_color);
-          if (tp.link_color) root.style.setProperty('--tg-theme-link-color', tp.link_color);
-          if (tp.button_color) root.style.setProperty('--tg-theme-button-color', tp.button_color);
-          if (tp.button_text_color) root.style.setProperty('--tg-theme-button-text-color', tp.button_text_color);
-          if (tp.secondary_bg_color) root.style.setProperty('--tg-theme-secondary-bg-color', tp.secondary_bg_color);
-          document.body.style.backgroundColor = tp.bg_color || '#ffffff';
-          document.body.style.color = tp.text_color || '#000000';
+          var r = document.documentElement;
+          if (tp.bg_color) r.style.setProperty('--tg-bg', tp.bg_color);
+          if (tp.text_color) r.style.setProperty('--tg-text', tp.text_color);
+          if (tp.hint_color) r.style.setProperty('--tg-hint', tp.hint_color);
+          if (tp.link_color) r.style.setProperty('--tg-link', tp.link_color);
+          if (tp.button_color) r.style.setProperty('--tg-btn', tp.button_color);
+          if (tp.button_text_color) r.style.setProperty('--tg-btn-text', tp.button_text_color);
+          if (tp.secondary_bg_color) r.style.setProperty('--tg-bg2', tp.secondary_bg_color);
+          document.body.style.backgroundColor = tp.bg_color || '#0f0f0f';
+          document.body.style.color = tp.text_color || '#ffffff';
         }
       })();
     </script>
